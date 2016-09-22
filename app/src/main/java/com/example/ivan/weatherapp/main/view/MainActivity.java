@@ -1,24 +1,27 @@
 package com.example.ivan.weatherapp.main.view;
 
-import android.databinding.DataBindingUtil;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
+import android.support.v4.view.ViewPager;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 
 import com.example.ivan.weatherapp.R;
 import com.example.ivan.weatherapp.common.WeatherApplication;
-import com.example.ivan.weatherapp.databinding.ActivityMainBinding;
 import com.example.ivan.weatherapp.main.presenter.MainPresenter;
 import com.hannesdorfmann.mosby.mvp.MvpActivity;
+
+//import com.example.ivan.weatherapp.databinding.ActivityMainBinding;
 
 public class MainActivity
         extends MvpActivity<MainView, MainPresenter>
         implements MainView
 {
 
-    private ActivityMainBinding binding;
+   // private ActivityMainBinding binding;
+    private ViewPager viewPager;
+    private PagerAdapter viewPagerAdapter;
 
     @NonNull
     @Override
@@ -30,12 +33,18 @@ public class MainActivity
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         ((WeatherApplication) getApplication()).component().inject(this);
-        binding = DataBindingUtil.setContentView(this,R.layout.activity_main);
+        setContentView(R.layout.activity_main);
+        //binding = DataBindingUtil.setContentView(this,R.layout.activity_main);
 
 
-        Toolbar toolbar = binding.toolbar;
+        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
+        viewPager = (ViewPager) findViewById(R.id.viewpager);
+
+        viewPagerAdapter = new PagerAdapter(getSupportFragmentManager());
+
+        viewPager.setAdapter(viewPagerAdapter);
 
     }
 

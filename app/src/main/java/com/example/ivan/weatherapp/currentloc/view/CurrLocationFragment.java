@@ -22,6 +22,7 @@ public class CurrLocationFragment
         implements CurrLocationView
 {
 
+
     private FragmentCurrLocationBinding binding;
 
     @Override
@@ -38,7 +39,9 @@ public class CurrLocationFragment
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         binding = DataBindingUtil.inflate(inflater, R.layout.fragment_curr_location, container, false);
 
-
+        presenter = createPresenter();
+        presenter.attachView(this);
+        presenter.loadWeatherInfo();
 
         return binding.getRoot();
     }

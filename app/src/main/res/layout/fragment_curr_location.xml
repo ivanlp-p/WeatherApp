@@ -16,49 +16,56 @@
                 android:id="@+id/city_name"
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/curr_location_height"
-                android:textSize="22sp"
                 android:gravity="center"
-                android:textStyle="bold"/>
+                android:text="Москва"
+                android:textSize="22sp"
+                android:textStyle="bold" />
 
             <TextView
                 android:id="@+id/temputure"
                 android:layout_width="match_parent"
-                android:layout_height="500dp"
-                android:textSize="48sp"
+                android:layout_height="300dp"
                 android:gravity="center"
-                android:textStyle="bold"/>
+                android:text="5 C"
+                android:textSize="48sp"
+                android:textStyle="bold" />
         </LinearLayout>
 
         <LinearLayout
             android:id="@+id/day_info"
-            android:layout_below="@+id/current_location_info"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal">
+            android:layout_below="@+id/current_location_info"
+            android:orientation="horizontal"
+            android:weightSum="1">
 
             <TextView
-            android:id="@+id/temputure_morning"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textSize="48sp"
-            android:gravity="center"
-            android:textStyle="bold"/>
+                android:id="@+id/temputure_morning"
+                android:layout_width="match_parent"
+                android:layout_height="164dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="5 C"
+                android:textSize="48sp"
+                android:textStyle="bold" />
 
             <TextView
                 android:id="@+id/temputure_afternoon"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textSize="48sp"
+                android:layout_weight="1"
                 android:gravity="center"
-                android:textStyle="bold"/>
+                android:textSize="48sp"
+                android:textStyle="bold" />
 
             <TextView
                 android:id="@+id/temputure_evening"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textSize="48sp"
+                android:layout_weight="1"
                 android:gravity="center"
-                android:textStyle="bold"/>
+                android:textSize="48sp"
+                android:textStyle="bold" />
 
         </LinearLayout>
 

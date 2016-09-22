@@ -1,10 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
-<layout xmlns:android="http://schemas.android.com/apk/res/android">
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
 
-    <RelativeLayout
+    <FrameLayout
         android:id="@+id/content_main"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
 
         <android.support.v4.view.ViewPager
             android:id="@+id/viewpager"
@@ -13,12 +15,14 @@
 
             <android.support.v4.view.PagerTitleStrip
                 android:id="@+id/title_strip"
+                style="@style/ViewPagerTitleStrip"
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/title_strip_height"
-                android:layout_gravity="top"/>
+                android:layout_gravity="top"
+                android:background="@color/colorPrimary"/>
 
         </android.support.v4.view.ViewPager>
 
-    </RelativeLayout>
+    </FrameLayout>
 </layout>
 

@@ -38,6 +38,12 @@ public class NetModule {
 
     @Provides
     @Singleton
+    public GsonBuilder provideGsonBuilder() {
+        return new GsonBuilder();
+    }
+
+    @Provides
+    @Singleton
     public OpenWeatherMapApi provideOpenWeatherMapApi(OkHttpClient client, GsonBuilder gsonBuilder) {
         return new Retrofit.Builder()
                 .client(client)

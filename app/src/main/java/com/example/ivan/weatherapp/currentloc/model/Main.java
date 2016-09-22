@@ -6,7 +6,7 @@ package com.example.ivan.weatherapp.currentloc.model;
 
 public class Main {
 
-    public int temp;
+    public float temp;
 
     public Main() {
     }
@@ -15,7 +15,7 @@ public class Main {
         this.temp = temp;
     }
 
-    public int getTemp() {
+    public float getTemp() {
         return temp;
     }
 }

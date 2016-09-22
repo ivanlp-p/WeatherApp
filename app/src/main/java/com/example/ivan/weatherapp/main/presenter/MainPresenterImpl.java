@@ -1,5 +1,7 @@
 package com.example.ivan.weatherapp.main.presenter;
 
+import android.content.Context;
+
 import com.example.ivan.weatherapp.main.view.MainView;
 import com.hannesdorfmann.mosby.mvp.MvpBasePresenter;
 
@@ -11,8 +13,10 @@ import javax.inject.Inject;
 
 public class MainPresenterImpl extends MvpBasePresenter<MainView> implements MainPresenter {
 
-    @Inject
-    public MainPresenterImpl() {
+    private Context context;
 
+    @Inject
+    public MainPresenterImpl(Context context) {
+        this.context = context;
     }
 }

@@ -5,13 +5,11 @@
 
     <android.support.design.widget.CoordinatorLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:fitsSystemWindows="true"
-        tools:context="com.example.ivan.weatherapp.main.view.view.MainActivity">
+        android:layout_height="match_parent">
 
         <include layout="@layout/app_bar_main"/>
 
-        <include layout="@layout/content_main" />
+        <include layout="@layout/content_main"/>
 
 
     </android.support.design.widget.CoordinatorLayout>

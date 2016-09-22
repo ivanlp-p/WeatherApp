@@ -32,7 +32,7 @@ public class WeatherApplication extends Application {
     public void onCreate() {
         super.onCreate();
 
-        component = DaggegWeatherApplication_ApplicationComponent
+        component = DaggerWeatherApplication_ApplicationComponent
                 .builder()
                 .androidModule(new AndroidModule(this))
                 .build();
