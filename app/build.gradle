@@ -76,5 +76,13 @@ dependencies {
     compile 'com.google.dagger:dagger:2.5'
     provided 'javax.annotation:jsr250-api:1.0'
 
+    // GooglePlayServices
+    compile 'com.google.android.gms:play-services:9.6.0'
+    compile 'com.google.android.gms:play-services-location:9.6.0'
+
+    // JodaTime
+    compile 'net.danlew:android.joda:2.9.4.1'
+
+
     testCompile 'junit:junit:4.12'
 }
